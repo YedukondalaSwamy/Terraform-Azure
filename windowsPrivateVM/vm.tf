@@ -4,7 +4,7 @@ resource "azurerm_windows_virtual_machine" "vm" {
   location            = azurerm_resource_group.myrg.location
   size                = "Standard_B1s"
   admin_username      = "admin461"
-  admin_password      = "KINGofandhra1"
+  admin_password      = "xxxxxxxxxx"
   network_interface_ids = [
     azurerm_network_interface.nic.id,
   ]

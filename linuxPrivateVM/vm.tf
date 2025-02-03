@@ -4,7 +4,7 @@ resource "azurerm_linux_virtual_machine" "myvm" {
   location            = azurerm_resource_group.myrg.location
   size                = "Standard_F2"
   admin_username      = "admin461"
-  admin_password      = "KINGofandhra1"
+  admin_password      = "xxxxxxxxxxx"
   disable_password_authentication = false
 
   network_interface_ids = [

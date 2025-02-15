@@ -1,0 +1,10 @@
+resource_group_name        = "RGroup"
+resource_group_location    = "eastus"
+network_security_group     = "networksg"
+virtual_network_name       = "virtualnw"
+vnet_address_space         = [ "10.0.0.0/16" ]
+subnet_name                = "default"
+subnet_address_prefixes    = ["10.0.0.0/24"]
+nic_card_name              = "mynic"
+virtual_machine_name       = "myvm"
+virtual_machine_size       = "Standard_B1s"

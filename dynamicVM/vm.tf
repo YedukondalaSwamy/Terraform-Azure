@@ -1,8 +1,8 @@
 resource "azurerm_windows_virtual_machine" "vm" {
-  name                = "virtual-machine"
-  resource_group_name = azurerm_resource_group.myrg.name
-  location            = azurerm_resource_group.myrg.location
-  size                = "Standard_B2ms"
+  name                = var.virtual_machine_name
+  resource_group_name = azurerm_resource_group.rg.name
+  location            = azurerm_resource_group.rg.location
+  size                = var.virtual_machine_size
   admin_username      = "admin461"
   admin_password      = "KINGofandhra1"
   network_interface_ids = [

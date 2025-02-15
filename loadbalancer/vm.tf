@@ -1,12 +1,12 @@
-resource "azurerm_windows_virtual_machine" "vm" {
+resource "azurerm_windows_virtual_machine" "myvm" {
   name                = "virtual-machine"
   resource_group_name = azurerm_resource_group.myrg.name
   location            = azurerm_resource_group.myrg.location
-  size                = "Standard_B2ms"
+  size                = "Standard_B1s"
   admin_username      = "admin461"
   admin_password      = "KINGofandhra1"
   network_interface_ids = [
-    azurerm_network_interface.nic.id,
+    azurerm_network_interface.mynic.id,
   ]
 
   os_disk {

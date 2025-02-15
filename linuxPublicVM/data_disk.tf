@@ -14,3 +14,20 @@
   lun                = "10"
   caching            = "ReadWrite"
   }
+  
+
+  resource "azurerm_managed_disk" "disk1" {
+  name                 = "data1"
+  location             = azurerm_resource_group.myrg.location
+  resource_group_name  = azurerm_resource_group.myrg.name
+  storage_account_type = "Standard_LRS"
+  create_option        = "Empty"
+  disk_size_gb         = 10
+}
+
+  resource "azurerm_virtual_machine_data_disk_attachment" "vmdisk1" {
+    managed_disk_id = azurerm_managed_disk.disk1.id
+    virtual_machine_id = azurerm_linux_virtual_machine.myvm.id
+    lun = "9"
+    caching = "ReadWrite"
+  }
